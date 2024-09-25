@@ -30,17 +30,17 @@ jobs:
         aws-region: ${{ secrets.AWS_DEFAULT_REGION }}
     
     - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '16'  # Escolha a versão do Node.js que você está usando
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'  # Escolha a versão do Node.js que você está usando
 
-      - name: Install Lambda Dependencies
-        run: |
-          cd ..
-          cd lambda  # Ajuste o caminho para a pasta que contém seu código Lambda
-          npm install  # Instala dependências do package.json
-          cd ..  # Volta para o diretório anterior
-          cd terraform
+    - name: Install Lambda Dependencies
+      run: |
+        cd ..
+        cd lambda  # Ajuste o caminho para a pasta que contém seu código Lambda
+        npm install  # Instala dependências do package.json
+        cd ..  # Volta para o diretório anterior
+        cd terraform
 
     - name: Set up Terraform
       uses: hashicorp/setup-terraform@v3

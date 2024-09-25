@@ -13,7 +13,7 @@ provider "aws" {
       Project   = "Tentativa de api com lambda"
       CreateAt  = "2024-09-13"
       ManagedBy = "Terraform"
-      Owner     = "Felipe"
+      Owner     = "Felipe A"
     }
   }
 }

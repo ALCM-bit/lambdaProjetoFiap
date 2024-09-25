@@ -1,5 +1,5 @@
 resource "aws_iam_role" "lambda1_exec" {
-  name               = "lambda"
+  name               = "lambda1"
   assume_role_policy = <<POLICY
 {
   "Version": "2012-10-17",
@@ -22,7 +22,7 @@ resource "aws_iam_role_policy_attachment" "lambda_policy" {
 }
 
 resource "aws_iam_policy" "lambda_vpc1_policy" {
-  name        = "LambdaVpcPolicy"
+  name        = "LambdaVpc1Policy"
   description = "Policy for Lambda to manage network interfaces in VPC"
   policy = jsonencode({
     Version = "2012-10-17",

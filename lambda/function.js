@@ -1,6 +1,7 @@
 const { MongoClient } = require('mongodb');
 const jwt = require('jsonwebtoken');
 
+//Obtem as variaveis de ambiente
 const uri = process.env.DB_CONNECTION_STRING;
 const secret = process.env.JWT_SECRET;
 
